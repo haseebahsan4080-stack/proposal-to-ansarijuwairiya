@@ -1,0 +1,63 @@
+.pink-theme {
+  background: linear-gradient(135deg, #FF6F61, #FF9A9E);
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.heart {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #FF6F61;
+  animation: pulsate 1.5s infinite;
+}
+
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  animation: sparkleAnimation 1.5s infinite;
+}
+
+@keyframes pulsate {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes sparkleAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .pink-theme {
+    font-size: 14px;
+  }
+  .heart {
+    width: 40px;
+    height: 40px;
+  }
+  .sparkle {
+    width: 8px;
+    height: 8px;
+  }
+}
