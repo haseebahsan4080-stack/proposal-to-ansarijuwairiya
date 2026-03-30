@@ -1,1 +1,104 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Romantic Proposal</title>\n    <style>\n        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f2f2f2; }\n        header { background-color: #ff69b4; color: white; text-align: center; padding: 50px; animation: fadeIn 2s; }\n        section { padding: 20px; margin: 20px; border-radius: 10px; background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }\n        h2 { color: #ff69b4; }\n        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }\n        footer { text-align: center; padding: 20px; position: relative; }\n        .button { background-color: #ff69b4; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }\n    </style>\n</head>\n<body>\n    <header>\n        <h1>Will You Marry Me?</h1>\n    </header>\n    <section>\n        <h2>A Special Moment</h2>\n        <p>This is a moment I've dreamt about for a long time. The love we share is unique and precious. Let's cherish it forever!</p>\n    </section>\n    <section>\n        <h2>Our Journey</h2>\n        <p>From our first date, to endless laughter shared, every moment spent together has brought us closer. I want to continue this journey together as partners.</p>\n    </section>\n    <section>\n        <h2>Why You?</h2>\n        <p>You are my best friend, my confidant, and the love of my life. Your smile brightens my day and your love fills my heart.</p>\n    </section>\n    <section>\n        <h2>The Question</h2>\n        <p>I cannot imagine my life without you. Will you make me the happiest person alive and say yes?</p>\n        <button class="button" onclick="alert('Yay! You said Yes!');">Click Here to Say Yes!</button>\n    </section>\n    <footer>\n        <p>Created with ❤️ - 2026</p>\n    </footer>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Proposal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, pink, purple, blue, orange, yellow);
+            animation: gradient 15s ease infinite;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        h1 {
+            font-size: 3rem;
+            margin-top: 20vh;
+        }
+        section {
+            margin: 5vh 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: transform 0.5s;
+        }
+        section:hover {
+            transform: scale(1.05);
+        }
+        .button {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .heart {
+            position: absolute;
+            animation: float 6s infinite;
+            pointer-events: none;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our Special Moment</h1>
+    <section id="story">
+        <h2>Our Story</h2>
+        <p>Our journey began when we least expected it. Every moment since has been filled with laughter, love, and adventure. 
+        Every new day brings us closer to our dreams together.</p>
+    </section>
+    <section id="qualities">
+        <h2>Why You're Special</h2>
+        <p>Your kindness, strength, and determination inspire me every day. You have a unique way of making the world brighter.</p>
+    </section>
+    <section id="why-i-love-you">
+        <h2>Why I Love You</h2>
+        <p>Your smile, your laughter, and your unwavering support make every day special. You complete me in ways I never imagined.</p>
+    </section>
+    <section id="promise">
+        <h2>My Promise to You</h2>
+        <p>I promise to stand by you through thick and thin, to support you in your dreams, and to always keep the spark alive.</p>
+    </section>
+    <section id="future">
+        <h2>Our Future Together</h2>
+        <p>Our future is filled with endless possibilities. I look forward to creating beautiful memories with you and exploring life together.</p>
+    </section>
+    <section id="final-message">
+        <h2>A Final Message</h2>
+        <p>Thank you for being you. Let's make every moment count and cherish our love forever.</p>
+    </section>
+    <section id="celebration">
+        <h2>Let’s Celebrate Our Love</h2>
+        <button class="button">Make It Special</button>
+    </section>
+
+    <script>
+        // Create floating hearts
+        for (let i = 0; i < 10; i++) {
+            let heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = 3 + Math.random() * 3 + 's';
+            document.body.appendChild(heart);
+        }
+    </script>
+</body>
+</html>
